@@ -1,0 +1,27 @@
+//- This is how we extend a template using the 'extends' keyword
+extends ../../../templates/master.pug
+//- This is how we insert dynamic content to extended templates
+block content
+    h1.title Plate Number and Condition
+        ul
+        //- This is how we iterate through arrays and access
+        //- their elements
+    <table border ="2">
+        thead
+            tb 
+                th ID
+                th Brand 
+                th Model 
+                th Year
+                th Plate No. 
+                th Condition
+            each user in users
+                tr 
+                    td= user.id
+                    td= user.brand
+                    td= user.model
+                    td= user.yr 
+                    td= user.plate
+                    td= user.con
+            
+            a(class = 'button',href = '/index') BACK

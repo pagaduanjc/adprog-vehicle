@@ -1,0 +1,36 @@
+//- This is the master template. Basically all the other pages will
+//- extend this. This btw, is a Pug comment. This will not appear
+//- in your browser when you render the HTML.
+
+html
+    head
+        // This is the title of the page. Pretty basic.
+        title Vehicles
+    style 
+        include style.css
+        // Here we import the asset files such as Bulma and FontAwesome.
+        // You can use this out of the box. This btw, is an HTML comment
+        // in Pug. This will appear in your browser when you render the
+        // HTML.
+        link(rel="stylesheet" href="/assets/bulma/bulma.css")
+        link(rel="stylesheet" href="/assets/font-awesome-4.7.0/css/font-awesome.min.css")
+
+    body
+        // I'm using Bulma's classes here.
+        // Refer to this: http://bulma.io/documentation/layout/container/
+        div.section
+            div.container
+                //- This part right here is the dynamic content. Once you extend
+                //- this template, you can place anything here.
+                <div class="dropdown">
+                <button class="dropbtn">Home</button>
+                <div class="dropdown-content">
+                    <a href="/view">View</a>
+                    <a href="/users/new">Create</a>
+                    <a href="/delete">Delete</a>
+                    <a href="/users/update">Update</a>
+                </div>
+                </div>
+        // This comment marks the dynamic content
+        hr
+        block content

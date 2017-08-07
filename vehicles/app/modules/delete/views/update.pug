@@ -1,0 +1,30 @@
+extends ../../../templates/master.pug
+
+//- This is how we insert dynamic content to extended templates
+block content
+    form(method="POST" action="/users/update")
+        .field
+            .label ID to Update
+            .control
+                input.input(type="number" placeholder="ID" name="id")
+        .field
+            .label BRAND
+            .control
+                input.input(type="text" placeholder="brand" name="brand")
+        .field
+            .label MODEL
+            .control
+                input.input(type="text" placeholder="model" name="model")
+        .field
+            .label YEAR
+            .control
+                input.input(type="text" placeholder="year" name="yr")
+        .field
+            .label PLATE
+            .control
+                input.input(type="text" placeholder="platenum" name="plate")
+        .field
+            .label CONDITION
+            .control
+                input.input(type="text" placeholder="condition" name="con")
+        input(type="submit" value="Submit")

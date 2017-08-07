@@ -1,0 +1,15 @@
+//- This is how we extend a template using the 'extends' keyword
+extends ../../../templates/master.pug
+   
+//- This is how we insert dynamic content to extended templates
+block content
+   h1.title CurrusIS!
+   hr
+   h2.title2 NASA DELETE NA KAMI! MAKISAMA KANG WALANGYA KA
+   
+   form(method="POST" action="/users/delete")
+        .field
+            .label deletewhut?
+            .control
+                input.input(type="number" placeholder="id" name="id")
+        input(type="submit" value="Submit")
